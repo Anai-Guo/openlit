@@ -60,7 +60,7 @@ jobs:
           VERSION=${RELEASE_TAG#go-}
           test "$(sed -n 's/^const Version = "\([^"]*\)"$/\1/p' sdk/go/version.go)" = "$VERSION"
 
-      - uses: actions/setup-go@v6
+      - uses: actions/setup-go@v7
         with:
           go-version-file: sdk/go/go.mod
           cache-dependency-path: sdk/go/go.sum
