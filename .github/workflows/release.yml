@@ -167,7 +167,7 @@ jobs:
           poetry check
           poetry build
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         if: needs.prepare.outputs.tool == 'typescript' || needs.prepare.outputs.tool == 'openlit'
         with:
           node-version: '20.x'
